@@ -1,12 +1,16 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
     <div>
-      Hello World.{' '}
+      <h1>Hello World. </h1>
       <Link href="/about">
-        <a>About</a>
+        <a>👉　About page!</a>
+      </Link>
+      <br />
+      <Link href="/blog/first-page">
+        <a>👉　BlogList page!</a>
       </Link>
     </div>
-  )
+  );
 }
