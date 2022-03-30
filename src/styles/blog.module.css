@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: mistyrose;
+  /* paddingはcontainerの存在を確認するための設置 */
+  padding: 5px;
+}
+.mainContent {
+  width: 60%;
+  background-color: lightblue;
+}
+.subContent {
+  width: 35%;
+  background-color: lightseagreen;
+}

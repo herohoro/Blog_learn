@@ -1,12 +1,9 @@
-import Link from "next/link";
+import styles from "../styles/page.module.css";
 const AboutPage = () => {
   return (
-    <div>
-      <h1>This page is About.</h1>
+    <div className={styles.container}>
+      <h2>About page</h2>
       <br />{" "}
-      <Link href="/">
-        <a>Go to Home!</a>
-      </Link>
     </div>
   );
 };
