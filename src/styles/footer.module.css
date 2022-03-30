@@ -1,0 +1,12 @@
+.footer {
+  margin: 40px 0 10px;
+  text-align: center;
+  font-size: 0.75rem;
+  background-color: lightcoral;
+}
+.footer span {
+  color: azure;
+}
+.footer span a {
+  color: inherit;
+}
