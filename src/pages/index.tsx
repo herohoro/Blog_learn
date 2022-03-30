@@ -1,6 +1,7 @@
 import Link from "next/link";
+import styles from "../styles/page.module.css";
 const RenderPage = () => (
-  <div>
+  <div className={styles.container}>
     <div>
       <h2>Welcome! </h2>
       <p>branch 03_csb-nods6y</p>
