@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 const RenderPage = () => (
   <div>
     <div>
