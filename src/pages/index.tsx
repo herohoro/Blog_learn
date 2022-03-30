@@ -1,11 +1,12 @@
 import Link from "next/link";
 
-export default function IndexPage() {
-  return (
+const RenderPage = () => (
+  <div>
     <div>
-      <h1>Hello World. </h1>
-      <p>branch 02_csb-p3b04x</p>
-      <p>This page is Home</p>
+      <h2>Welcome! </h2>
+      <p>branch 03_csb-nods6y</p>
+      <code>making like easy-notion-blog　</code>
+      <h3>This page is Home</h3>
       <Link href="/about">
         <a>👉　About page!</a>
       </Link>
@@ -14,5 +15,6 @@ export default function IndexPage() {
         <a>👉　BlogList page!</a>
       </Link>
     </div>
-  );
-}
+  </div>
+);
+export default RenderPage;
