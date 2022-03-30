@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function AboutPage() {
+const AboutPage = () => {
   return (
     <div>
       <h1>This page is About.</h1>
@@ -9,4 +9,5 @@ export default function AboutPage() {
       </Link>
     </div>
   );
-}
+};
+export default AboutPage;
