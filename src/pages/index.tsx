@@ -1,15 +1,51 @@
 import styles from "../styles/page.module.css";
-const RenderPage = () => (
-  <div className={styles.container}>
-    <div>
-      <h2>Home page</h2>
-      <p>branch 07_csb-rseo19</p>
-      <code>
-        ... making like easy-notion-blog
-        <br />
-        API routing　
-      </code>
+
+import { getSortedPostsData } from "../lib/posts";
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData
+    }
+  };
+};
+
+export default function RenderPage({
+  allPostsData
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) {
+  return (
+    <div className={styles.container}>
+      <div>
+        <h2>Home page</h2>
+        <p>branch 08_csb-rw064k</p>
+        <code>
+          ... making like easy-notion-blog
+          <br />
+          Data fetching
+        </code>
+      </div>
+      <section>
+        <h3>verse data</h3>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
-  </div>
-);
-export default RenderPage;
+  );
+}
