@@ -25,11 +25,11 @@ export default function RenderPage({
     <div className={styles.container}>
       <div>
         <h2>Home page</h2>
-        <p>branch 08_csb-rw064k</p>
+        <p>branch 09_csb-9cp6j7</p>
         <code>
           ... making like easy-notion-blog
           <br />
-          Data fetching
+          Notion API_read-text/date
         </code>
       </div>
       <section>
