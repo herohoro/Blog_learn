@@ -13,6 +13,7 @@
     "@types/react": "17.0.43",
     "gray-matter": "4.0.3",
     "next": "latest",
+    "nextjs-router": "1.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "typescript": "4.6.3"

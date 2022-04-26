@@ -29,7 +29,7 @@ export default function RenderPage({
         <code>
           ... making like easy-notion-blog
           <br />
-          Notion API_read-text/date
+          slug_read_route_pagenation
         </code>
       </div>
       <section>

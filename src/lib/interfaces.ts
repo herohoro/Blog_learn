@@ -3,4 +3,5 @@ export interface Post {
   Title: string;
   Excerpt: string;
   Date: string;
+  Slug: string;
 }
