@@ -5,3 +5,6 @@ export const getDateStr = (date) => {
   const d = ("00" + dt.getDate()).slice(-2);
   return y + "-" + m + "-" + d;
 };
+export const getBlogLink = (slug: string) => {
+  return `/blog/${slug}`;
+};
