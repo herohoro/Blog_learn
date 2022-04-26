@@ -25,7 +25,7 @@ export default function RenderPage({
     <div className={styles.container}>
       <div>
         <h2>Home page</h2>
-        <p>branch 09_csb-9cp6j7</p>
+        <p>branch 10_csb-oek04h</p>
         <code>
           ... making like easy-notion-blog
           <br />
