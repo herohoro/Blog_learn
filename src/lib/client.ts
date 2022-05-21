@@ -1,5 +1,5 @@
 //型定義
-import { Post } from "./interfaces";
+import { Post, Block, Paragraph, RichText, Text } from "./interfaces";
 //環境変数
 import { NOTION_API_SECRET, DATABASE_ID } from "./sever-containts";
 
@@ -55,4 +55,51 @@ export async function getPosts() {
   const data = await client.databases.query(params);
   // 列名ごと必要な情報を残していく
   return data.results.map((item) => _buildPost(item));
+}
+function _buildRichText(item) {
+  const text: Text = {
+    Content: item.text.content
+  };
+
+  const richText: RichText = {
+    Text: text,
+    PlainText: item.plain_text
+  };
+  return richText;
+}
+export async function getAllBlocksByBlockId(blockId) {
+  let allBlocks: Block[] = [];
+  const params = {
+    block_id: blockId
+  };
+  // while (true) {
+  const data = await client.blocks.children.list(params);
+
+  const blocks = data.results.map((item) => {
+    const block: Block = {
+      Id: item.id,
+      Type: item.type,
+      HasChildren: item.has_children
+    };
+    switch (item.type) {
+      case "paragraph":
+        const paragraph: Paragraph = {
+          RichTexts: item.paragraph.rich_text.map(_buildRichText)
+        };
+        block.Paragraph = paragraph;
+        break;
+      default:
+        console.log("失敗....");
+    }
+
+    return block;
+  });
+  allBlocks = allBlocks.concat(blocks);
+  // if (!data.has_more) {
+  //   break;
+  // }
+  params["start_cursor"] = data.next_cursor;
+  // }
+
+  return allBlocks;
 }
