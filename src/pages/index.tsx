@@ -25,11 +25,11 @@ export default function RenderPage({
     <div className={styles.container}>
       <div>
         <h2>Home page</h2>
-        <p>branch 10-2_csb-ykipsk</p>
+        <p>branch 11_csb-zz22j8</p>
         <code>
           ... making like easy-notion-blog
           <br />
-          slug_read_route_pagenation(fix-ok)
+          slug_DBcolum
         </code>
       </div>
       <section>

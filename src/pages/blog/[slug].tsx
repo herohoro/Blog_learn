@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 import { getPostBySlug, getAllPosts } from "../../lib/client";
 import { getBlogLink } from "../../lib/blog-helpers";
 import styles from "../../styles/blog.module.css";
-// import { PostDate, PostTitle } from "../../components/blog-parts";
+import { PostDate, PostTitle } from "../../components/blog-parts";
+// import { useEffect } from "react";
 
 export async function getStaticProps({ params: { slug } }) {
   const post = await getPostBySlug(slug);
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
     fallback: "blocking"
   };
 }
-const RenderPost = (post) => {
+const RenderPost = ({ post }) => {
   const router = useRouter();
   const { slug } = router.query;
 
@@ -26,6 +27,9 @@ const RenderPost = (post) => {
     <div className={styles.container}>
       <div className={styles.mainContent}>
         <p>Post: {slug}</p>
+
+        <PostDate post={post} />
+        <PostTitle post={post} enableLink={false} />
       </div>
     </div>
   );

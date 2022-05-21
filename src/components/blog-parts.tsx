@@ -6,13 +6,17 @@ import { getDateStr, getBlogLink } from "../lib/blog-helpers";
 
 export const PostDate = ({ post }) => <div>{getDateStr(post.Date)}</div>;
 
-export const PostTitle = ({ post }) => {
+export const PostTitle = ({ post, enableLink = true }) => {
   const postTitle = post.Title ? post.Title : "";
   return (
     <h3>
-      <Link href="/blog/[slug]" as={getBlogLink(post.Slug)} passHref>
-        <a>{postTitle}</a>
-      </Link>
+      {enableLink ? (
+        <Link href="/blog/[slug]" as={getBlogLink(post.Slug)} passHref>
+          <a>{postTitle}</a>
+        </Link>
+      ) : (
+        postTitle
+      )}
     </h3>
   );
 };

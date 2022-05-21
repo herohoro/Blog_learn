@@ -242,6 +242,13 @@ next@latest:
     "@next/swc-win32-ia32-msvc" "12.1.4"
     "@next/swc-win32-x64-msvc" "12.1.4"
 
+nextjs-router@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nextjs-router/-/nextjs-router-1.0.2.tgz#eea2073632333079fa937d7691c9a2cd7320d3d0"
+  integrity sha512-C82LHsr8PeR1Jvai5KuPsCa/ZIJU6ewXhUqOmDy6IJq8uJ3lr+1B29ltofj3m5KYj7veOlEZXgCe1hdhvmSlLA==
+  dependencies:
+    rfr "^1.2.3"
+
 node-fetch@^2.6.1:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
@@ -284,6 +291,11 @@ react@17.0.2:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+rfr@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/rfr/-/rfr-1.2.3.tgz#e7bb719337ede977091faf12eac8b6cd2dba9011"
+  integrity sha1-57txkzft6XcJH68S6si2zS26kBE=
 
 scheduler@^0.20.2:
   version "0.20.2"
